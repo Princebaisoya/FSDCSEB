@@ -103,10 +103,80 @@
 
 
 // }
+
+
+
 // let result=selectLanguage("c");
 // console.log(result);
-console.log("Hello World");
-let parent=document.getElementsByClassName("parent");
-console.log(parent);
-parent[0].innerText="Data has changed"
+// console.log("Hello World");
+// // let parent=document.getElementsByClassName("parent");
+// // console.log(parent);
+// // parent[0].innerText="Data has changed"
+// const div=document.getElementsByClassName("parent");
+// console.log(div);
+// // div[0].innerHTML="<h2 style=color:red>Hello Js</h2>";
+// const h1=document.createElement("h1");
+// console.log(h1);
+// h1.innerText="ABES";
+// console.log(h1);
+// h1.style.backgroundColor="cyan";
+
+// h1.style.padding="20px";
+// h1.style.marginLeft="300px";
+// // to add element with dom tree
+// div[0].appendChild(h1);
+// const img=document.createElement("img");
+// img.src="./img4.jpg";
+// console.log(img);
+// img.setAttribute("height","250px");
+// img.setAttribute("width","300px");
+// div[0].appendChild(img);
+// div[0].removeChild(img);
+
+
+// function getData(){
+//     console.log("Hi,inside getData function");
+//     div[0].innerHTML="<h2  style=color:red>Hi,Event Handled</h2>";
+// }
+// const button=document.getElementsByClassName("btn");
+// console.log(button);
+// button[0].addEventListener("click",getData);
+
+
+// const promise=new Promise((resolve,reject)=>{
+//     let a=12;
+//     if(a>10){
+//         resolve("Accepted");
+//     }
+//     else{
+//         reject("Not Accepted");
+//     }
+// })
+
+// promise.then((msg)=>{console.log(msg)})
+// .catch((error)=>{console.log(error)})
+// .finally(()=>console.log("All resourses have closed"));
+
+
+// const promise2=new Promise((resolve,reject)=>{
+//     resolve({name:"Prince",Stack:"MERN Stack"});
+
+// });
+// promise2.then((data)=>{console.log("Hi"+data.name)})
+// .catch(x=>{console.log(x)})
+
+
+
+
+const response=fetch("https://dummyjson.com/products");
+response.then((data)=>{
+    console.log(data);
+    data.json().then((res)=>{
+        console.log(res);
+    })
+})
+
+
+
+
 
